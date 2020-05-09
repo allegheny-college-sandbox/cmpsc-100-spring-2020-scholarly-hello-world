@@ -22,7 +22,7 @@ before_install:
   # add gradle bin to path at the beginning to ensure it overwrites old gradle
   - export PATH="$HOME/gradle-4.6/bin:$PATH"
   # switch to Python 3.6.3 globally, install python dependencies
-  - pyenv global 3.7
+  - pyenv global 3.7.4
   - pip install --upgrade pip
   - pip install proselint
   - pip install pipenv
