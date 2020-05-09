@@ -65,3 +65,10 @@ checkstyle {
   maxErrors = 0
   configFile = new File(rootDir, "config/checkstyle/google_checks.xml")
 }
+
+task convert (type: Exec) {
+  commandLine 'cd src'
+  commandLine 'jupyter nbconvert --to python *.ipynb'
+}
+
+grade.dependsOn convert
