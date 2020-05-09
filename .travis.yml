@@ -22,7 +22,7 @@ before_install:
   # add gradle bin to path at the beginning to ensure it overwrites old gradle
   - export PATH="$HOME/gradle-4.6/bin:$PATH"
   # switch to Python 3.6.3 globally, install python dependencies
-  - pyenv global 3.6.3
+  - pyenv global 3.7
   - pip install --upgrade pip
   - pip install proselint
   - pip install pipenv
@@ -48,6 +48,7 @@ before_script:
   - cd src
   - jupyter nbconvert --to python *.ipynb
   - cd ..
+
 # run checks on a student's Markdown writing through GatorGrader
 # run checks on the README file with mdl and proselint
 # run checks on a student's Python code GatorGrader
