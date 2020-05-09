@@ -14,8 +14,5 @@ v = {editable = true,version = "*"}
 pytest-cov = "*"
 pytest-sugar = "*"
 
-[requires]
-python_version = "3.7"
-
 [pipenv]
 allow_prereleases = true
