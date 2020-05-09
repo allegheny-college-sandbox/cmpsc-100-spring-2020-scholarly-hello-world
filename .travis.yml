@@ -55,14 +55,6 @@ before_script:
 # run checks on a student's Markdown writing through GatorGrader
 # note: "gradle grade" will install GatorGrader and run all checks
 script:
-  # lint the assignment's documentation
-  - mdl README.md
-  # Python: run and lint the program
-  - pipenv run pytest
-  - pipenv run python3 src/hello_world.py
-  - pipenv run flake8 src
-  - pipenv run black --check src
-  - pipenv run pylint src
   # Java: see build.gradle
   - gradle --version
   # GatorGrader: see config/gatorgrader.yml
