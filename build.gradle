@@ -66,9 +66,8 @@ checkstyle {
   configFile = new File(rootDir, "config/checkstyle/google_checks.xml")
 }
 
-task convert (type: Exec) {
-  commandLine 'cd src'
-  commandLine 'jupyter nbconvert --to python *.ipynb'
+task convert(type: Exec) {
+    commandLine "jupyter","nbconvert","--to","python","src/*.ipynb"
 }
 
 grade.dependsOn convert
