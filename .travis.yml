@@ -47,7 +47,7 @@ before_script:
   - rm -rf $HOME/.local/share/gatorgrader
   - cd src
   - jupyter nbconvert --to python *.ipynb
-
+  - cd ..
 # run checks on a student's Markdown writing through GatorGrader
 # run checks on the README file with mdl and proselint
 # run checks on a student's Python code GatorGrader
