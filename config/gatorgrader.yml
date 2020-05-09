@@ -1,0 +1,19 @@
+---
+name: cmpsc-100-scholarly-hello-world
+break: true
+indent: 4
+---
+# --> check the source code for various characteristics
+# note that without an "--exact" the check is an "at least"
+src:
+    hello_world.py:
+        ConfirmFileExists
+        MatchFileFragment --fragment "TODO" --count 0
+        MatchFileFragment --fragment "print(" --count 1
+
+# --> check the number of commits beyond a threshold
+CountCommits --count 5
+# --> check that the program executes and produces 1 lines of output
+ExecuteCommand --command "pipenv run python3 src/hello_world.py"
+CountCommandOutput --command "pipenv run python3 src/hello_world.py" --count 1
+MatchCommandOutput --command "pipenv run python3 src/hello_world.py" --fragment "Hello, World!" --count 1 --exact
