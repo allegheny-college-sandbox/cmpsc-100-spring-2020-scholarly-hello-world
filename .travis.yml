@@ -43,7 +43,10 @@ cache:
 
 # delete any cached version of GatorGrader and require a fresh installation
 before_script:
+  - pip install notebook
   - rm -rf $HOME/.local/share/gatorgrader
+  - cd src
+  - jupyter nbconvert --to python *.ipynb
 
 # run checks on a student's Markdown writing through GatorGrader
 # run checks on the README file with mdl and proselint
