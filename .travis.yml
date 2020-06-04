@@ -22,14 +22,14 @@ before_install:
   # add gradle bin to path at the beginning to ensure it overwrites old gradle
   - export PATH="$HOME/gradle-4.6/bin:$PATH"
   # switch to Python 3.6.3 globally, install python dependencies
-  - pyenv global 3.8.3
+  - pyenv global 3.6.3
   - pip install --upgrade pip
   - pip install proselint
   - pip install pipenv
   # do not allow Travis to use standard error for debugging purposes
   - unset _JAVA_OPTIONS
   # install dev dependencies with pipenv
-  - pipenv install --dev --three
+  - pipenv install --three
 
 # cache to improve build speed
 before_cache:
