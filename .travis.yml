@@ -29,7 +29,7 @@ before_install:
   # do not allow Travis to use standard error for debugging purposes
   - unset _JAVA_OPTIONS
   # install dev dependencies with pipenv
-  - pipenv install --three
+  - pipenv install --dev --three
 
 # cache to improve build speed
 before_cache:
