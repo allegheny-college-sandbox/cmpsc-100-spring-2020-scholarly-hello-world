@@ -46,7 +46,7 @@ wrapper {
 jar {
   manifest {
     attributes(
-        'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+        //'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
         'Main-Class': 'not.used'
         )
   }
@@ -70,4 +70,5 @@ task convert(type: Exec) {
     commandLine "jupyter","nbconvert","--to","python","src/*.ipynb"
 }
 
+build.dependsOn convert
 grade.dependsOn convert
