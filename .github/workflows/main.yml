@@ -23,11 +23,12 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       run: |
+        export PATH="/home/runner/.local/bin:$PATH"
         pip install --upgrade pip
         pip install proselint
         pip install pipenv
         pip install notebook
         cd src
-        /home/runner/.local/bin/jupyter nbconvert --to python *.ipynb
+        jupyter nbconvert --to python *.ipynb
         cd ..
         gradle grade
