@@ -26,7 +26,6 @@ jobs:
         pip install --upgrade pip
         pip install proselint
         pip install pipenv
-        pipenv install --dev --three
         pip install notebook
         cd src
         jupyter nbconvert --to python *.ipynb
