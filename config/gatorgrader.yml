@@ -14,6 +14,6 @@ src:
 # --> check the number of commits beyond a threshold
 CountCommits --count 5
 # --> check that the program executes and produces 1 lines of output
-ExecuteCommand --command "pipenv run python3 src/hello_world.py"
-CountCommandOutput --command "pipenv run python3 src/hello_world.py" --count 1
-MatchCommandFragment --command "pipenv run python3 src/hello_world.py" --fragment "Hello, World!" --count 1 --exact
+ExecuteCommand --command "python3 src/hello_world.py"
+CountCommandOutput --command "python3 src/hello_world.py" --count 1
+MatchCommandFragment --command "python3 src/hello_world.py" --fragment "Hello, World!" --count 1 --exact
