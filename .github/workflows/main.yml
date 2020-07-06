@@ -28,6 +28,6 @@ jobs:
         pip install pipenv
         pip install notebook
         cd src
-        jupyter nbconvert --to python *.ipynb
+        /home/runner/.local/bin jupyter nbconvert --to python *.ipynb
         cd ..
         gradle grade
