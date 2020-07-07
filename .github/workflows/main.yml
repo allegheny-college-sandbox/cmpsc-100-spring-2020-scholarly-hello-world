@@ -18,7 +18,4 @@ jobs:
         pip install proselint
         pip install pipenv
         pip install notebook
-        cd src
-        jupyter nbconvert --to python *.ipynb
-        cd ..
         gradle grade
