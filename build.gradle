@@ -67,7 +67,7 @@ checkstyle {
 }
 
 task convert(type: Exec) {
-    commandLine "jupyter","nbconvert","--to","python","src/*.ipynb"
+  commandLine "jupyter","nbconvert","--to","python","src/*.ipynb"
 }
 
 build.dependsOn convert
