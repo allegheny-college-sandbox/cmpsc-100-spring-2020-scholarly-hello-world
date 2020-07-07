@@ -21,11 +21,10 @@ jobs:
         pip install --upgrade pip
         pip install pipenv
         pip install notebook
-        pipenv lock
         pipenv install --dev --three
-        pipenv run flake8 src
-        pipenv run black --check src
-        pipenv run pylint src
+        # pipenv run flake8 src
+        # pipenv run black --check src
+        # pipenv run pylint src
         gradle grade
       env:
        PIPENV_VENV_IN_PROJECT: 1
