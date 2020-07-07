@@ -25,7 +25,7 @@ jobs:
         pip install pipenv
         pip install notebook
         pipenv install --dev --three
-        pipenv run flake8 src
+        # pipenv run flake8 src
         pipenv run black --check src
         pipenv run pylint src
         gradle grade
