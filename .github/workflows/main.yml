@@ -20,14 +20,11 @@ jobs:
        PIPENV_IGNORE_VIRTUALENVS: 1
       run: |
         export PATH="/home/runner/.local/bin:$PATH"
+        pyenv global 3.6.3
         pip install --upgrade pip
         pip install pipenv
         pip install notebook
         pipenv install --dev --three
-        pipenv install flake8
-        pipenv install black
-        pipenv install pylint
-        pipenv install proselint
         # flake8 src
         # black --check src
         # pylint src
