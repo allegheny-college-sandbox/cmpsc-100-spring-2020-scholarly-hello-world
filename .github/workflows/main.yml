@@ -21,7 +21,7 @@ jobs:
       run: |
         export PATH="/home/runner/.local/bin:$PATH"
         pip install --upgrade pip
-        pip install flake8
+        python3 -m pip install flake8
         pip install pylint
         python3 -m pip install black
         pip install proselint
