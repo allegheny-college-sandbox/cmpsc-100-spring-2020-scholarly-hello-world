@@ -16,6 +16,7 @@ jobs:
         fetch-depth: '0'
     - name: Grading
       run: |
+        pipfile lock
         pyenv global 3.6.3
         export PATH="/home/runner/.local/bin:$PATH"
         pip install --upgrade pip
