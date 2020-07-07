@@ -45,8 +45,7 @@ cache:
 before_script:
   - pip install notebook
   - rm -rf $HOME/.local/share/gatorgrader
-  - cd src
-  - jupyter nbconvert --to python *.ipynb
+  - cd worksheets
   - cd ..
 
 # run checks on a student's Markdown writing through GatorGrader
@@ -55,6 +54,11 @@ before_script:
 # run checks on a student's Markdown writing through GatorGrader
 # note: "gradle grade" will install GatorGrader and run all checks
 script:
+  # Linting and style checks removed; uncomment pipenv commands below to add
+  - pipenv run flake8 src
+  # Specifically, for black, add binary to the Pipfile dependencies
+  # - pipenv run black --check src
+  - pipenv run pylint src
   # Java: see build.gradle
   - gradle --version
   # GatorGrader: see config/gatorgrader.yml
