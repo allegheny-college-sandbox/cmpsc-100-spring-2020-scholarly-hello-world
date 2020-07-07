@@ -53,11 +53,11 @@ before_script:
 # note: "gradle grade" will install GatorGrader and run all checks
 script:
   # Linting and style checks removed; uncomment pipenv commands below to add
-  - pipenv run flake8 src
+  # - pipenv run flake8 src
   # Specifically, for black, add binary to the Pipfile dependencies
   # - pipenv run black --check src
-  - pipenv run pylint src
+  # - pipenv run pylint src
   # Java: see build.gradle
-  - gradle --version
+  # - gradle --version
   # GatorGrader: see config/gatorgrader.yml
   - gradle grade
