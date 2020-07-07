@@ -15,18 +15,20 @@ jobs:
       with: 
         fetch-depth: '0'
     - name: Grading
+      env:
+       PIPENV_VENV_IN_PROJECT: 1
+       PIPENV_IGNORE_VIRTUALENVS: 1
       run: |
         export PATH="/home/runner/.local/bin:$PATH"
         pip install --upgrade pip
         pip install flake8
         pip install pylint
-        # pip install black
+        pip install black
         pip install proselint
         pip install pipenv
         pip install notebook
-        pip install importlib-metadata
         pipenv install --dev --three
         pipenv run flake8 src
-        # pipenv run black --check src
+        pipenv run black --check src
         pipenv run pylint src
         gradle grade
