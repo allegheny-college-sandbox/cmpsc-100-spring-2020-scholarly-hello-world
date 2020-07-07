@@ -17,8 +17,10 @@ jobs:
         pip install --upgrade pip
         pip install proselint
         pip install pipenv
-        pipenv install --dev --three
         pip install notebook
+        pip install importlib-metadata
+        pipenv install --dev --three
         pipenv run flake8 src
+        pipenv run black --check src
         pipenv run pylint src
         gradle grade
