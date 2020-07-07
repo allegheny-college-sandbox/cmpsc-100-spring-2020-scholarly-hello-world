@@ -45,8 +45,6 @@ cache:
 before_script:
   - pip install notebook
   - rm -rf $HOME/.local/share/gatorgrader
-  - cd worksheets
-  - cd ..
 
 # run checks on a student's Markdown writing through GatorGrader
 # run checks on the README file with mdl and proselint
