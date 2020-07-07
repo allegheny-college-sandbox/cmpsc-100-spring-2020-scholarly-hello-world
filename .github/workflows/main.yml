@@ -23,7 +23,7 @@ jobs:
         pip install --upgrade pip
         pip install flake8
         pip install pylint
-        pip install black
+        python3 -m pip install black
         pip install proselint
         pip install pipenv
         pip install notebook
